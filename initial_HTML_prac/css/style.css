@@ -1,0 +1,29 @@
+body
+{
+    background-color: #c6ebc9;
+}
+img:hover
+{
+    height: 150px;
+    background-color: brown;
+    
+}
+hr
+{
+            
+    border-style: dotted none none none;
+    border-width: 10px;
+    border-color: bisque;
+    height: 0px;
+    width: 20%;
+}
+h1
+{
+    font: italic bold 2em "Fira Sans", serif;
+    color: #70af85;
+}
+h3
+{
+    font: italic 1.2em "Fira Sans", serif;
+    color: #aa8976;
+}  
