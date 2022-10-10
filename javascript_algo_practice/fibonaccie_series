@@ -1,0 +1,14 @@
+//fibonacci series 
+
+var lst = [0];
+var ele1 = 1;
+var ele2 = 0;
+var n = prompt("number of entries:   ");
+
+ for (var i=1; i<n ; i++){
+     ele2 = ele2 + ele1;
+     ele1 = ele2 - ele1;
+     lst.push(ele2) ;
+ }
+
+console.log(lst);

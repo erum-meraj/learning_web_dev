@@ -1,0 +1,15 @@
+//objects 
+
+function Student (name, age, grade) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+    this.work = function (){
+        console.log("studying")
+    }
+    
+}
+
+var st1 = new Student('abc', 4, 12);
+st1.work();
+ 

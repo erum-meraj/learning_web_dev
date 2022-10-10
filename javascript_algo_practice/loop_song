@@ -1,0 +1,9 @@
+function song(){
+    var cnt = 99
+    while (cnt>0){
+        console.log(cnt+" bottles of beer on the wall, "+ cnt + " bottles of beer. Take one down and pass it around, "+ (cnt-1)+ " bottles of beer on the wall. ")
+        cnt--
+    }
+    
+}
+song()
