@@ -9,8 +9,49 @@
 <body>
     <h1>Weather App</h1>
     <br><br><br>
+    <div>
+        <label>Place Name:  </label>
+        <input id="cityInput" type="text" name="place">
+        <button onclick="onSubmitHandler()">submit</button>
+    </div> 
 
+
+    <h1>Result</h1>
+    <div id="data-elm"></div>
     
-    
+    <script>
+
+        function onSubmitHandler() {
+
+            const place =  document.getElementById("cityInput").value
+            const url = 'https://api.openweathermap.org/data/2.5/weather?q='+place+'&units=metric&appid=b1d5f70b111bc79129ae64927af193de'
+            fetch(url).then((data) => {
+                console.log(data)
+                res.on('data', function (data) {
+                    const weatherData = JSON.parse(data)
+                    //console.log(weatherData.weather[0].description)
+                    const tempPlace = weatherData.main.temp
+                    const desc = weatherData.weather[0].description
+                    const icon = weatherData.weather[0].icon
+                    const img_url = "http://openweathermap.org/img/wn/"+icon+"@2x.png"
+                    //response.send(data)
+                    console.log(weatherData);
+                })
+
+                var rootElm = document.getElementById("data-elm");
+                var tag = document.createElement("h2")
+                var content = document.createTextNode('hello')
+                tag.appendChild(content)
+                var elm = document.getElementById("data-elm")
+                elm.appendChild(tag)
+            }).catch((e) => {
+                console.log("error while calling api", e)
+            })
+            
+
+        }
+
+       
+    </script>
 </body>
 </html>
